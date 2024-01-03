@@ -1,0 +1,1 @@
+WIP Integration to have Hubitat control Hatch devices
