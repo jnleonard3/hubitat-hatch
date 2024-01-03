@@ -1,7 +1,6 @@
 const { prepareWebSocketUrl } = require('aws-iot-device-sdk/device/index.js')
 const http = require("http");
 
-const host = 'localhost';
 const port = 8236;
 
 const requestListener = function (req, res) {
@@ -25,6 +24,6 @@ const requestListener = function (req, res) {
 };
 
 const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+server.listen({ port }, () => {
+    console.log(`Server is running on port ${port}`);
 });
